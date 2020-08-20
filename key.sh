@@ -31,6 +31,8 @@ Options:
   -d	Disable password login"
 }
 
+sed -i '1a\PermitRootLogin yes' /etc/ssh/sshd_config
+
 if [ $# -eq 0 ]; then
     USAGE
     exit 1
